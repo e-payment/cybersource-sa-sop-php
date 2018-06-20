@@ -1,0 +1,13 @@
+# Operating System Files
+*.DS_Store
+Thumbs.db
+*.sw?
+.#*
+*#
+*~
+*.sublime-*
+
+notify/
+screenshot/
+
+**/*config.php
