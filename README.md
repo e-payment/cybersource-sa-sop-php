@@ -64,3 +64,16 @@ php -t ./ -S 0.0.0.0:8088
 
 ## Open Web Browser
 - http://localhost:8088/payment/
+
+### Test Card
+
+```
+  Card Type      Card Number       3-D S  ECI  Notes
+  -------------  ----------------  -----  ---  -------------------------------
+  Visa           4000000000000002    Y     5
+  Visa           4111111111111111          7
+  MasterCard     5200000000000007    Y     2
+  MasterCard     5555555555554444          0
+  JCB            3569990010083722    Y     5    Without authentication window
+  JCB            3569960010083758    Y     6    Enrolled During Shopping
+  JCB            3566111111111113          -

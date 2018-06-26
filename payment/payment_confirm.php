@@ -51,7 +51,7 @@ $endpoint_url = PAYMENT_URL;
         <p>
         <div id="UnsignedDataSection" class="section">
         <span>card_type:</span><input type="text" name="card_type"> VISA: 001, MC: 002, JCB: 007<br/>
-        <span>card_number:</span><input type="text" name="card_number" maxlength="16"> V: 4000000000000002, M: 5555555555554444, J: 3566111111111113<br/>
+        <span>card_number:</span><input type="text" name="card_number" maxlength="16"> V: 4000000000000002, M: 5200000000000007, J: 3566111111111113<br/>
         <span>card_expiry_date:</span><input type="text" name="card_expiry_date"><br/>
         <span>card_cvn:</span><input type="text" name="card_cvn" maxlength="4"><br/>
     </div>
