@@ -10,9 +10,17 @@
 
 <ul>
 	<li><a href="payment_form.php">Payment</a></li>
+	<!--
 	<li><a href="report_query.php">Inquiry Transaction</a></li>
 	<li><a href="card.php">Credit Card Form</a></li>
 	<li><a href="card-js.html">CardJs</a></li>
+	-->
+</ul>
+
+<h3>Inquiry transaction</h3>
+<ul>
+    <li><a href="query.php?type=json&requestID=5300832562976234903522">Inquiry by Request ID</a></li>
+    <li><a href="query.php?type=json&merchantReferenceNumber=BAY1530083230090&targetDate=20180627">Inquiry by Reference Number & Date</a></li>
 </ul>
 
 <h3>Test Cybersource Business Center</h3>

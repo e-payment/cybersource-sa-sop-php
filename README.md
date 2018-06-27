@@ -33,6 +33,13 @@ define('AGGREGATOR_ID', '<AGGREGATOR_ID>');       // String(11)
 define('SALES_ORG_ID',  '<SALES_ORG_ID>');        // Integer(11)
 define('MERCHANT_DESC', '<MERCHANT_DESCRIPTOR>'); // String(22)
 
+// INQUIRY TRANSACTION
+$rpt_username = '<RPT_USERNAME>';
+$rpt_password = '<RPT_PASSWORD>';
+
+// proxy
+$proxy        = '<PROXY_HOST:PROXY_PORT>';
+
 // EOF
 ```
 
