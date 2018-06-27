@@ -29,9 +29,9 @@ define('TOKEN_CREATE_URL', CYBS_BASE_URL . '/token/create');
 define('TOKEN_UPDATE_URL', CYBS_BASE_URL . '/token/update');
 
 // MERCHANT PSP
-define('AGGREGATOR_ID', '<AGGREGATOR_ID>');
-define('SALES_ORG_ID',  '<SALES_ORG_ID>');
-define('MERCHANT_DESC', '<MERCHANT_DESCRIPTOR>');
+define('AGGREGATOR_ID', '<AGGREGATOR_ID>');       // String(11)
+define('SALES_ORG_ID',  '<SALES_ORG_ID>');        // Integer(11)
+define('MERCHANT_DESC', '<MERCHANT_DESCRIPTOR>'); // String(22)
 
 // EOF
 ```
