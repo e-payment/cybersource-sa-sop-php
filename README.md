@@ -16,13 +16,22 @@ define('SECRET_KEY',  '<SECRET_KEY>');
 // DF TEST: 1snn5n9w, LIVE: k8vif92e 
 define('DF_ORG_ID', '1snn5n9w');
 
-///// PAYMENT URL /////
+// PAYMENT URL
+// TEST //
+define('CYBS_BASE_URL', 'https://testsecureacceptance.cybersource.com/silent');
+// LIVE //
+//define('CYBS_BASE_URL', 'https://secureacceptance.cybersource.com/silent');
 
-// TEST
-define('PAYMENT_URL', 'https://testsecureacceptance.cybersource.com/silent/pay');
+define('PAYMENT_URL', CYBS_BASE_URL . '/pay');
+// define('PAYMENT_URL', '/payment/debug.php');
 
-// LIVE
-//define('PAYMENT_URL', 'https://secureacceptance.cybersource.com/silent/pay');
+define('TOKEN_CREATE_URL', CYBS_BASE_URL . '/token/create');
+define('TOKEN_UPDATE_URL', CYBS_BASE_URL . '/token/update');
+
+// MERCHANT PSP
+define('AGGREGATOR_ID', '<AGGREGATOR_ID>');
+define('SALES_ORG_ID',  '<SALES_ORG_ID>');
+define('MERCHANT_DESC', '<MERCHANT_DESCRIPTOR>');
 
 // EOF
 ```
@@ -43,7 +52,6 @@ define('REPORT_ENDPOINT', 'https://ebctest.cybersource.com/ebctest/Query');
 //define('REPORT_ENDPOINT', 'https://ebc.cybersource.com/ebctest/Query');
 
 define('MERCHANT_ID',  '<MERCHANT_ID>');
-
 define('RPT_USERNAME', '<USERNAME>');
 define('RPT_PASSWORD', '<PASSWORD>');
 
@@ -68,12 +76,28 @@ php -t ./ -S 0.0.0.0:8088
 ### Test Card
 
 ```
-  Card Type      Card Number       3-D S  ECI  Notes
-  -------------  ----------------  -----  ---  -------------------------------
-  Visa           4000000000000002    Y     5
-  Visa           4111111111111111          7
-  MasterCard     5200000000000007    Y     2
-  MasterCard     5555555555554444          0
-  JCB            3569990010083722    Y     5    Without authentication window
-  JCB            3569960010083758    Y     6    Enrolled During Shopping
-  JCB            3566111111111113          -
+  Card Type      Card Number       3-D  ECI  Notes
+  -------------  ----------------  ---  ---  -------------------------------
+  Visa           4000000000000002   Y    5
+  Visa           4111111111111111        7
+  MasterCard     5200000000000007   Y    2
+  MasterCard     5555555555554444        0
+  JCB            3569990010083722   Y    5    Without authentication window
+  JCB            3569960010083758   Y    6    Enrolled During Shopping
+  JCB            3566111111111113        -
+```
+
+## Reference
+
+- [Secure Acceptance Silent Order POST Development Guide (PDF)](https://github.com/e-payment/cybersource-secure-acceptance/blob/master/doc/Secure_Acceptance_SOP.pdf)
+
+### White-list IP address
+
+All Secure Acceptance notification messaging will originate from a different range of servers and IP addresses. If you are using any Secure Acceptance services, you must add the following IP address ranges to any whitelist or filtering logic.
+
+```
+198.241.162.1 - 198.241.162.254
+198.241.168.1 - 198.241.168.254
+```
+
+- [White-list IP to receive replies and posts from CyberSource](https://support.cybersource.com/s/article/What-IP-addresses-should-I-add-to-my-white-list-to-receive-replies-and-posts-from-CyberSource)

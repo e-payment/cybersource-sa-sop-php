@@ -58,14 +58,16 @@ UTC: <?php echo gmdate('Y-m-d\TH:i:s\Z') ?>
             <span>amount:</span>                      <input type="text" name="amount"><br/>
             <span>currency:</span>                    <input type="text" name="currency" max="3"><br/>
             <span>locale:</span>                      <input type="text" name="locale"> (en-us, th-th, ja-jp)<br/>
+
+            <h3>Merchant PSP</h3>            
             <span>aggregator_id:</span>               <input type="text" name="aggregator_id" value="<?php echo AGGREGATOR_ID ?>"><br/>
             <span>sales_organization_id:</span>       <input type="text" name="sales_organization_id" value="<?php echo SALES_ORG_ID ?>"><br/>
             <span>submerchant_id:</span>              <input type="text" name="submerchant_id" value="<?php echo MERCHANT_ID ?>"><br/>
-            <span>merchant_descriptor:</span>         <input type="text" name="merchant_descriptor" value="KSAM">
+            <span>merchant_descriptor:</span>         <input type="text" name="merchant_descriptor" value="<?php echo MERCHANT_DESC ?>">
     </fieldset>
     <p>
 
-    <div style="display: none">
+    <div style="display: block">
     <fieldset>
         <legend>Unsigned Data Fields</legend>
         The name of each unsigned field should be included in the unsigned_field_names.
@@ -80,7 +82,6 @@ UTC: <?php echo gmdate('Y-m-d\TH:i:s\Z') ?>
             <span>bill_to_address_state:</span>       <input type="text" name="bill_to_address_state"><br/>
             <span>bill_to_address_country:</span>     <input type="text" name="bill_to_address_country"><br/>
             <span>bill_to_address_postal_code:</span> <input type="text" name="bill_to_address_postal_code"><br/>
-        
     </fieldset>
     </div>
     
